@@ -16,6 +16,7 @@ const buscaCep = (evento) => {
 
     fetch(`https://viacep.com.br/ws/${cepDigitado}/json`)
     .then((resposta) => { return resposta.json() })
+    console.log(resposta);
     .then((dados) => {
         ruaInput.value = dados.logradouro;
         bairroInput.value = dados.bairro;
